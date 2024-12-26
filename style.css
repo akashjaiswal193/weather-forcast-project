@@ -1,0 +1,169 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align elements to the top in landscape mode */
+    height: 120%;
+    background-image: url('https://wallpapercave.com/wp/qQa5Pd7.jpg'); /* Replace with your own image */
+    background-size: 1400px 1300px;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #333;
+}
+
+.container {
+    text-align: center;
+    background-color: rgba(160, 204, 204, 0.815); /* White container background color with opacity */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    max-width: 400px;
+    width: 45%; /* Start with a smaller width for better landscape adaptation */
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #000000; /* Bright blue color for headings */
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+select,
+input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #000000; /* Bright blue border */
+    border-radius: 5px;
+    width: 80%; /* Input fields take up more space */
+    background-color: #f0f0f0; /* Light gray input background color */
+    color: #333; /* Dark text color */
+    margin-bottom: 10px; /* Space between input and button */
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.error {
+    color: red;
+    margin-top: 10px;
+}
+
+p {
+    margin: 10px 0;
+}
+
+.weather-icon {
+    width: 120px; /* Larger icon size for landscape */
+    height: 120px;
+    margin: 0 auto 20px;
+}
+
+.daily-forecast {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-evenly; /* Items are spaced evenly across the container */
+    align-items: center;
+}
+
+.daily-forecast img {
+    width: 60px; /* Slightly smaller icons to fit landscape */
+    height: 60px;
+}
+
+#activitySuggestion {
+    margin-top: 20px;
+}
+
+#date {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Landscape Orientation */
+@media (orientation: landscape) {
+    body {
+        flex-direction: row;
+        justify-content: space-evenly; /* Distribute content horizontally */
+        align-items: flex-start;
+        padding: 20px;
+        height: auto; /* Allow content to adjust height based on viewport */
+    }
+
+    .container {
+        width: 40%; /* Slightly smaller container for landscape */
+        padding: 20px;
+    }
+
+    .weather-icon {
+        width: 100px; /* Adjust icon size for landscape */
+        height: 100px;
+    }
+
+    .daily-forecast {
+        flex-direction: row; /* Align items horizontally */
+    }
+
+    .daily-forecast img {
+        width: 50px;
+        height: 50px;
+    }
+
+    button {
+        width: 100%; /* Make button take full width for better interaction */
+    }
+}
+
+/* Additional Mobile Adjustments (for Portrait and Small Screens) */
+@media (max-width: 768px) {
+    .container {
+        width: 80%; /* Ensure the container is wide enough on small screens */
+    }
+
+    select,
+    input[type="text"] {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 90%;
+        padding: 10px;
+    }
+
+    select,
+    input[type="text"] {
+        width: 90%; /* Make inputs fill the screen width */
+    }
+
+    .weather-icon {
+        width: 80px;
+        height: 80px;
+    }
+
+    .daily-forecast {
+        flex-direction: column; /* Stack forecast items vertically */
+    }
+
+    .daily-forecast img {
+        width: 50px;
+        height: 50px;
+    }
+}
